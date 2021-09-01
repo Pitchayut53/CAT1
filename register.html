@@ -1,0 +1,75 @@
+<html lang="en">
+    <head>
+        <title>TOURISM INFORMATION WEBSITE</title>
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="images/india.png" alt="" title="">TOURISM INFO</a>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Signup</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+
+    <div class="main">
+        <h2>Registration</h2>
+                <form method="POST">
+                    <h4>Account</h4>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="text" placeholder="First Name" required class="name">
+                            <i class="fa fa-user icon"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Last Name" required class="name">
+                            <i class="fa fa-user icon"></i>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="email" placeholder="Email Address" required class="name">
+                            <i class="fa fa-envelope icon"></i>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <input type="password" placeholder="Password" required class="name">
+                            <i class="fa fa-lock icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="inpit-group">
+                        <div class="input-box">
+                            <h4>Date of Birth</h4>
+                            <input type="text" placeholder="DD" class="dob">
+                            <input type="text" placeholder="MM" class="dob">
+                            <input type="text" placeholder="YYYY" class="dob">
+                        </div>
+                        <div class="input-box">
+                            <h4>Gender</h4>
+                            <input type="radio" name="gender" id="b1" checked class="radio">
+                            <label for="b1">Male</label>
+                            <input type="radio" name="gender" id="b2" checked class="radio">
+                            <label for="b2">Female</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <br>
+                            <button type="submit">SIGNUP</button>
+                        </div>
+                    </div>
+
+                </form>
+    </div>
+</body>
+</html>

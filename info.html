@@ -1,0 +1,81 @@
+<html lang="en">
+    <head>
+        <title>TOURISM INFORMATION WEBSITE</title>
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="images/india.png" alt="" title="">TOURISM INFO</a>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Signup</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="main">
+        <h2>10 Best Places to Visit in India</h2>
+        <p>India is an enormous and diverse destination. Bordered by seven different countries, not to mention the Arabian Sea and the Bay of Bengal, means that there are many different sides to the country. More than 20 official languages, multiple religions and a variety of cuisines exist within India’s borders. To truly experience the breadth of Indian culture and history, travel is key. Here’s a look at the best places to visit in India:</p>
+        <video width="770" height="400" controls>
+            <source src="images/Travel Video.mp4" type="video/mp4">
+          </video>
+          <p>Video Credit <a href="https://www.youtube.com/watch?v=IgAnj6r1O48" media="print and (resolution:300dpi) target="_blank">Click Here</a>.</p>
+
+          
+    </div>
+    <div class="location">
+        <button onclick="getlocation();"> Show Position</button> 
+        <div id="demo" style="width: 100%; height: 500px;"></div> 
+       
+        <script src="https://maps.google.com/maps/api/js?sensor=false"> </script> 
+        
+        <script type="text/javascript"> 
+        function getlocation(){ 
+            if(navigator.geolocation){ 
+                navigator.geolocation.getCurrentPosition(showPos, showErr); 
+            }
+            else{
+                alert("Sorry! your Browser does not support Geolocation API")
+            }
+        } 
+        //Showing Current Poistion on Google Map
+        function showPos(position){ 
+            latt = position.coords.latitude; 
+            long = position.coords.longitude; 
+            var lattlong = new google.maps.LatLng(latt, long); 
+            var myOptions = { 
+                center: lattlong, 
+                zoom: 15, 
+                mapTypeControl: true, 
+                navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL} 
+            } 
+            var maps = new google.maps.Map(document.getElementById("demo"), myOptions); 
+            var markers = 
+            new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"}); 
+        } 
+
+        //Handling Error and Rejection
+             function showErr(error) {
+              switch(error.code){
+              case error.PERMISSION_DENIED:
+             alert("User denied the request for Geolocation API.");
+              break;
+             case error.POSITION_UNAVAILABLE:
+             alert("USer location information is unavailable.");
+            break;
+            case error.TIMEOUT:
+            alert("The request to get user location timed out.");
+            break;
+           case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.");
+            break;
+           }
+        }        </script> 
+        </div>
+</body>
+</html>
